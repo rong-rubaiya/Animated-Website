@@ -13,7 +13,8 @@ html,body{
      */
 }
 
-header,main{
+header,main,
+.part-two-section{
   margin: 20px 40px 0px 40px;
 }
 
@@ -229,3 +230,156 @@ video{
     transform: translate(-100%);
   }
 }
+
+.part-two-section{
+  /* border: 1px solid rebeccapurple; */
+  width: 95%;
+  height:100vh ;
+}
+
+.part-two-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40%;
+  
+}
+
+.part-two-heading{
+  font-size: 3.3em;
+  line-height: 50px;
+  z-index: 9;
+  
+}
+
+.image-para{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: flex-end;
+  
+
+   
+}
+
+.image-para img{
+  height: 100px;
+  width: 200px;
+  border-radius: 20px;
+  margin-bottom: 2px;
+  
+}
+ .twosecpera{
+   
+  
+  /* border: 1px solid saddlebrown; */
+    font-weight: 200;
+    margin-top: 2vw;
+    font-size: 1vw;
+    height: 50px;
+    width: 200px;
+ }
+
+ .golla-orange1,
+ .golla-orange2{
+
+  height: 400px;
+  width: 400px;
+  background-color: orangered;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 300px;
+  filter: blur(50px);
+  z-index: -1;
+ 
+ }
+
+ .golla-orange1{
+  animation-name: round1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite ;
+   animation-timing-function: ease-in-out;
+ }
+
+ .golla-orange2{
+  animation-name: round2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite ;
+   animation-timing-function: ease-in-out;
+ }
+
+ 
+
+
+ @keyframes round1{
+  from{
+    transform: translate(0,0px) skew(0);
+  }
+  to{
+    transform: translate(20%,-10px) skew(-12deg);
+  }
+ }
+
+ @keyframes round2{
+  from{
+    transform: translate(-10,0px)skew(0);
+  }
+  to{
+    transform: translate(-20%,10px)skew(-12deg);
+  }
+ }
+
+ .page3{
+  margin-top: 100px;
+  height: 100vh;
+  width: 100%;
+
+ }
+
+ .elem{
+  
+  height: 150px;
+  width: 100%;
+  /* background-color: rgb(74, 29, 29); */
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* border-top: 1px solid gray; */
+  border-bottom: 1px solid gray;
+  overflow: hidden;
+ }
+
+ .elem h2{
+  padding: 40px;
+  font-size: 1.5em;
+  z-index: 9;
+ }
+
+ .elem .overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(238, 156, 4);
+  top: -100%;
+  transition: all ease 0.3s;
+  
+ }
+
+ .elem:hover .overlay{
+  top: 0;
+ }
+
+ #fixed-img{
+  height: 30vw;
+  width: 24vw;
+  background-color: red;
+  border-radius: 10px;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  z-index: 99;
+  display: none;
+  background-size: cover;
+  background-position: center;
+ }
